@@ -1,0 +1,13 @@
+function solution(n, m, sections) {
+    var answer=0;
+    let painting=0;
+    for (let section of sections) {
+        if (painting<section) {
+            answer+=1;
+            painting=section+m-1;
+        }
+        
+    }
+    
+    return answer;
+}
